@@ -4,6 +4,16 @@ import (
 	"errors"
 )
 
+type Node struct {
+	Value int
+	Next  *Node
+	Prev  *Node
+}
+
+func newNode(value int) *Node {
+	return &Node{Value: value}
+}
+
 type LinkedList struct {
 	Head   *Node
 	Tail   *Node
